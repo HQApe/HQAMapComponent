@@ -30,13 +30,13 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'HQMapComponent/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'HQMapComponent' => ['HQMapComponent/Assets/*.png']
-  # }
+s.source_files = 'HQMapComponent/Classes/*.{h,m}'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+ s.frameworks = 'JavaScriptcore','SystemConfiguration','CoreTelephony','CoreLocation','Security','GLKit','OpenGLES','UIKit','Foundation','CoreGraphics','QuartzCore','CoreLocation','AdSupport','AMapFoundationKit','AMapLocationKit','AMapSearchKit','MAMapKit'
+ s.libraries = 'z','c++','stdc++'
+
+  s.dependency 'CTMediator'
+  s.dependency 'AMap3DMap'
+  s.dependency 'AMapSearch'
+  s.dependency 'AMapLocation'
 end

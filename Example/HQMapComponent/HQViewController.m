@@ -7,7 +7,7 @@
 //
 
 #import "HQViewController.h"
-
+#import <HQMapComponent/CTMediator+HQMapComponent.h>
 @interface HQViewController ()
 
 @end
@@ -18,6 +18,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)jump:(id)sender {
+    
+    UIViewController *mapVc = [[CTMediator sharedInstance] fetchMapViewController];
+    [self.navigationController pushViewController:mapVc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
