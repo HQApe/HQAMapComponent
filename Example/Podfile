@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HQMapComponent_Example' do
+  pod 'HQMapComponent', :path => '../'
+
+  target 'HQMapComponent_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
