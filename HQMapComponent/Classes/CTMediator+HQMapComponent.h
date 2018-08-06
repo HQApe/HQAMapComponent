@@ -12,4 +12,8 @@
 - (UIViewController *)fetchMapViewController;
 
 - (UIViewController *)fetchMapViewControllerWithLocation:(CLLocation *)location;
+
+- (void)getCurrentLocationCompletion:(void(^)(CLLocation *location))completion;
+
+- (void)registerGDApiKey:(NSString *)apiKey;
 @end

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HQMapComponent'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'A short description of HQMapComponent.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+增加定位服务的调用
                        DESC
 
   s.homepage         = 'https://github.com/HQApe/HQAMapComponent'

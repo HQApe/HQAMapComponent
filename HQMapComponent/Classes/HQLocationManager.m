@@ -24,6 +24,16 @@
 
 @implementation HQLocationManager
 
++ (instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    static HQLocationManager *_instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super allocWithZone:zone];
+    });
+    return _instance;
+}
+
 /**定位工具*/
 - (AMapLocationManager *)locationManager
 {
@@ -153,7 +163,7 @@
 /* 连续定位回调 */
 - (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location
 {
-    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy);
+//    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy);
     if (location) {
         _PersistenceLocationingBlock(location, HQLocatingResultSucceed);
     }else {

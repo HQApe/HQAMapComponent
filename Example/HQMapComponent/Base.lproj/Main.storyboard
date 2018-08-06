@@ -45,6 +45,14 @@
                                     <action selector="jump:" destination="whP-gf-Uak" eventType="touchUpInside" id="Yia-pF-Bem"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B28-CD-X9w">
+                                <rect key="frame" x="97" y="257" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="定位"/>
+                                <connections>
+                                    <action selector="locating:" destination="whP-gf-Uak" eventType="touchUpInside" id="XJf-v0-4AW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>

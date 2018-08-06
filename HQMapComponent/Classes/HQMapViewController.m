@@ -58,6 +58,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.mapView.frame = self.view.bounds;
     [self.view addSubview:self.mapView];
+    
+    if (self.location) {
+        [self addAnnotationToMapViewWithlatitude:self.location.coordinate.latitude longitude:self.location.coordinate.longitude];
+    }
 }
 
 /**在指定的经纬度上加大头针*/

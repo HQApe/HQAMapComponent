@@ -7,12 +7,13 @@
 //
 
 #import "HQAppDelegate.h"
-
+#import <HQMapComponent/CTMediator+HQMapComponent.h>
 @implementation HQAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[CTMediator sharedInstance] registerGDApiKey:@"a8062a877e04f679e3ee793dd264e8d9"];
     return YES;
 }
 

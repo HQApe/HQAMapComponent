@@ -11,8 +11,7 @@
 
 @interface HQMapViewController : UIViewController
 
-/**在指定的经纬度上加大头针*/
-- (void)addAnnotationToMapViewWithlatitude:(CLLocationDegrees)latitude longitude:(CLLocationDegrees)longitude;
+@property(strong, nonatomic) CLLocation *location;
 
 @end
 

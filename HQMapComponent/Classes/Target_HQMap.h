@@ -11,4 +11,6 @@
 
 - (UIViewController *)Action_fetchMapViewController:(NSDictionary *)params;
 
+- (void)Action_getCurrentLocation:(NSDictionary *)params;
+
 @end

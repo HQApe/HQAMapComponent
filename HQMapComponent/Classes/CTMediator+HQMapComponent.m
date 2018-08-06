@@ -7,8 +7,10 @@
 
 #import "CTMediator+HQMapComponent.h"
 #import <MapKit/MapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 NSString * const kCTMediatorHQMap = @"HQMap";
 NSString * const kCTMediatorActionFetchMapVC= @"fetchMapViewController";
+NSString * const kCTMediatorActionGetCurrentLocation= @"getCurrentLocation";
 
 @implementation CTMediator (HQMapComponent)
 
@@ -26,6 +28,16 @@ NSString * const kCTMediatorActionFetchMapVC= @"fetchMapViewController";
         return viewController;
     }
     return [[UIViewController alloc] init];
+}
+
+- (void)getCurrentLocationCompletion:(void (^)(CLLocation *))completion {
+    
+    [self performTarget:kCTMediatorHQMap action:kCTMediatorActionGetCurrentLocation params:@{@"block":completion} shouldCacheTarget:YES];
+}
+
+- (void)registerGDApiKey:(NSString *)apiKey
+{
+    [[AMapServices sharedServices] setApiKey:apiKey];
 }
 
 @end
